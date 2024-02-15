@@ -107,7 +107,7 @@ a {
     min-height: 500px;
     width: 100dvw;
     position: absolute;
-    background: linear-gradient(to bottom, transparent 10%, #000 100%), url(/ndtlogo.jpg)no-repeat;
+    background: linear-gradient(to bottom, transparent 10%, #000 100%), url(ndtlogo.jpg)no-repeat;
     background-position: 100%;
     background-size: cover;
 }
@@ -274,7 +274,7 @@ a {
   }
   .headerNavList {
     width: 100dvw;
-    background: linear-gradient(to bottom, transparent 10%, #000 100%), url(/ndtlogo.jpg)no-repeat;
+    background: linear-gradient(to bottom, transparent 10%, #000 100%), url(ndtlogo.jpg)no-repeat;
     background-position: center;
     background-size: cover;
     z-index: 10;
