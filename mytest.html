@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+  #slider-container {
+    position: relative;
+    width: 500px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+  }
+  #slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .slide {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+  #prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+  #prev {
+    left: 0;
+  }
+  #next {
+    right: 0;
+  }
+</style>
+</head>
+<body>
+<div id="slider-container">
+  <div id="slider">
+    <img class="slide" src="/_0ed35b52-0973-4a73-a4ad-9bb7b18a508e.jpg" alt="Image 1">
+    <img class="slide" src="/_52fffd31-0e45-4b89-9486-768bab765bc0.jpg" alt="Image 2">
+    <img class="slide" src="/_72482530-cd1c-4f95-b1c7-c4c4f2190009.jpg" alt="Image 3">
+    <img class="slide" src="/_8ae2a4ab-1096-4bea-8b6d-63cd2a2315eb.jpg" alt="Image 4">
+    <img class="slide" src="/_e2724a94-a2fe-4655-8e6e-745774692d83.jpg" alt="Image 5">
+    <img class="slide" src="/_e68f3e18-0e88-4d40-a57d-a24c35d8221d.jpg" alt="Image 6">
+  </div>
+  <button id="prev">Prev</button>
+  <button id="next">Next</button>
+</div>
+
+<script>
+  const slider = document.getElementById("slider");
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
+  const slides = document.querySelectorAll(".slide");
+  let currentIndex = 0;
+
+  // Function to move to the next slide
+  function moveToNextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+  }
+
+  // Function to move to the previous slide
+  function moveToPrevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider();
+  }
+
+  // Function to update slider position
+  function updateSlider() {
+    const offset = -currentIndex * slides[0].offsetWidth;
+    slider.style.transform = `translateX(${offset}px)`;
+  }
+
+  // Move to next slide automatically every 3 seconds
+  setInterval(moveToNextSlide, 3000);
+
+  // Event listeners for prev and next buttons
+  prevButton.addEventListener("click", moveToPrevSlide);
+  nextButton.addEventListener("click", moveToNextSlide);
+</script>
+</body>
+</html>

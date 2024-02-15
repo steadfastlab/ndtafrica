@@ -17,6 +17,7 @@ a {
 .header {
   height: 100%;
   max-height: 100dvh;
+  position: relative;
 }
 .nav {
   background-color: #670480;
@@ -101,70 +102,171 @@ a {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
-.headerProfile {
-  border: 2px solid red;
-  position: absolute;
-  height: 500px;
-  width: 90dvw;
-  margin-top: 100px;
-  margin-left: 15px;
+.headerProfile{
+    margin-top: 80px;
+    min-height: 500px;
+    width: 100dvw;
+    position: absolute;
+    background: linear-gradient(to bottom, transparent 10%, #000 100%), url(/ndtlogo.jpg)no-repeat;
+    background-position: 100%;
+    background-size: cover;
 }
-.headerProfile .headerProfileContentContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.headerProfileContentContainer{
     width: 100%;
-}
-.headerProfile .headerProfileContentContainer .headerProfileContent{
+    height: 500px;
+   
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.headerProfileContent{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    justify-content: space-around;
     flex-direction: column;
-    height: 100%;
 }
-.headerProfile .headerProfileContentContainer .headerProfileContent .headerProfileHeaderText{
+.headerProfileHeaderText{
     padding: 10px 20px;
-
+    background: linear-gradient(to top, transparent 10%, #000 100%)
 }
-.headerProfile .headerProfileContentContainer .headerProfileContent .headerProfileHeaderText h1{
-    border-bottom: 2px solid red;
-    text-align: center;
+.headerProfileHeaderText h1{
+    color: #b13;
+    font-family: serif;
+    font-style: italic;
+    font-size: 50px;
+    border-bottom: 2px solid #fff;
 }
-.headerProfile .headerProfileContentContainer .headerProfileContent .headerProfileParagraphText{
-    border: 2px solid red;
+.headerProfileParagraphText{
     width: 90%;
+    margin-top: -20px;
 }
-.headerProfile .headerProfileContentContainer .headerProfileContent .headerProfileParagraphText p{
-    font-size: 18px;
-    flex-wrap: wrap;
+.headerProfileParagraphText p{
+    color: #f1f1f1;
     text-align: left;
     line-height: 25px;
-    padding: 20px 10px;
+    white-space: wrap;
+    font-size: 17px;
 }
-.headerProfile .headerProfileContentContainer .headerProfileContent .headerProfileButtons{
-    border: 2px solid red;
-    margin-top: 120px;
+.headerProfileButtons{
     padding: 20px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
-.headerProfile .headerProfileContentContainer .headerProfileContent .headerProfileButtons button{
-    padding: 10px 15px;
-    box-shadow: 0px 0px 5px #333;
-    border-radius: 5px;
-    outline: none;
+.headerProfileButtons button{
+    padding: 15px 20px;
+    background: transparent;
     border: none;
-    transition: all 0.3s ease-in;
-    padding-left: 10px;
-    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px #333;
+    outline: none;
+    transition: 0.2s;
 }
+.headerProfileButtons button:hover{
+    background: linear-gradient(#670480, #b15);
 }
-.headerProfile .headerProfileContentContainer .headerProfileContent .headerProfileButtons button:hover{
-    background-color: #670480;
-    transform: scale(1.1);
+.headerProfileButtons button a{
+    color: #f1f1f1;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 14px;
 }
-
+#mainSection{
+  height: 100dvh;
+  width: 96dvw;
+  border: 2px solid red;
+  margin-top: 600px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainSectionContainer{
+  height: 100dvh;
+  width: 90%;
+}
+.mainSectionContent{
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.firstSectionContent{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding:10px 30px;
+  flex-wrap: wrap;
+}
+.firstSectionContentHeaderText{
+  background-color: #670480;
+  width: 47%;
+  height: 150px;
+  margin-top: 10px;
+}
+.mainSectionIconsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+}
+.mainSectionIconsContainer i{
+  color: #b13;
+  text-align: center;
+  font-size: 50px;
+}
+.mainSectionText{
+  width: 100%;
+  margin-top: 10px;
+}
+.mainSectionText h2{
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 30px;
+}
+.mainSectionText P{
+  text-align: center;
+  color: #f1f1f1;
+}
+.secondSectionHeaderText{
+  margin-top: 20px;
+}
+.secondSectionHeaderTextContent{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.secondSectionHeaderTextheader{
+  width: 100%;
+  background-color: red;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.secondSectionHeaderTextheader h3{
+  text-align: center;
+  font-size: clamp(1rem, 0.3043rem + 3.4783vw, 3rem);
+  text-transform: capitalize;
+  font-family: serif;
+  border-bottom: 2px solid #f1f1f1;
+  font-style: oblique;
+  
+}
+.secondSectionHeaderTextparagraph{
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+.secondSectionHeaderTextparagraph p{
+  text-align: left;
+ padding-left: 10px;
+}
 @media only screen and (max-width: 768px) {
   .nav {
     justify-content: space-between;
@@ -172,7 +274,9 @@ a {
   }
   .headerNavList {
     width: 100dvw;
-    background: #333;
+    background: linear-gradient(to bottom, transparent 10%, #000 100%), url(/ndtlogo.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
     z-index: 10;
     position: absolute;
     top: 13vh;
